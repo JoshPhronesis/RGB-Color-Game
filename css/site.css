@@ -12,6 +12,12 @@ body{
     max-width: 600px;
     margin: 0 auto;
 }
-h1, span{
+h1 {
     color: white;
+}
+#stripe{
+    background-color: white;
+    height: 30px;
+    text-align: center;
+    color: black;
 }
