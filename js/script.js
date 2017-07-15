@@ -15,7 +15,14 @@ init();
 
 function init(){
     //mode buttons event listeners
-    for(var i=0; i<modeBtns.length;i++){
+    setupModeButtons();
+    setupSquares();
+    
+    reset();
+}
+
+function setupModeButtons(){
+     for(var i=0; i<modeBtns.length;i++){
         modeBtns[i].addEventListener("click", function(){
             modeBtns[0].classList.remove("selected");
             modeBtns[1].classList.remove("selected");
@@ -25,6 +32,9 @@ function init(){
             reset();
         })
     }
+}
+
+function setupSquares(){
     for(var i=0; i<squares.length;i++){
         squares[i].addEventListener("click",function(){
             var clickedColor = (this.style.background);
@@ -39,10 +49,7 @@ function init(){
             }
         })
     }
-    reset();
 }
-
-
 
 function reset(){
     colors=generateRandomColors(numOfSquares);
