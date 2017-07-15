@@ -35,7 +35,7 @@ hardBtn.addEventListener("click", function(){
     hardBtn.classList.toggle("selected");
     colors=generateRandomColors(numOfSquares);
     pickedColor=pickColor();
-    colorDisplay.textContent=pickColor();
+    colorDisplay.textContent= pickColor();
     for(var i = 0; i<squares.length;i++){
         squares[i].style.display="block";
         squares[i].style.background=colors[i];
@@ -45,11 +45,13 @@ hardBtn.addEventListener("click", function(){
 resetButton.addEventListener("click",function(){
     colors=generateRandomColors(numOfSquares);
     pickedColor = pickColor();
+    messageDisplay.textContent="";
+    resetButton.textContent="New Color";
     colorDisplay.textContent=pickedColor;
     for(var i=0;i<squares.length;i++){
         squares[i].style.background=colors[i];
     }
-    h1.style.background="#232323";
+    h1.style.background="steelblue";
 })
 
 colorDisplay.textContent=pickedColor;
